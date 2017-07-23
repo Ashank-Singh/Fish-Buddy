@@ -1,4 +1,4 @@
-// JSON PARSE 
+// JSON PARSE
 // Created by Ashank Singh on 7/22/17.
 // Copyright © 2017 Ashank Singh. All rights reserved.
 
@@ -12,7 +12,7 @@ var temperatureC = 0.0
 var distanceIn = 0.0
 
 if let url = URL(string: apiURL) {
-    if let data = try? Data(contentsOf: url){
+    if let data = try? Data(contentsOf: url) {
         do {
             let parsedData = try JSONSerialization.jsonObject(with: data as Data, options: .allowFragments) as! [String:Any]
             let currentTemperatureF = (parsedData["Temperature_Fahrenheit"] as! NSString).doubleValue
